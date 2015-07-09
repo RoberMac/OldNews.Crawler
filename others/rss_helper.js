@@ -57,7 +57,6 @@ function getNews(frequency){
         restrict = now - frequency;
     News.findOne({date: now}, function (err, found){
         if (found){
-            log.info('[News: Existed]', now)
             return;
         }
         log.info('[News: Start Fetch]', now)
@@ -182,5 +181,5 @@ module.exports = function (frequency){
     getNews(frequency)
     setInterval(function (){
         getNews(frequency)
-    }, 1000 * 60 * 5)
+    }, 1000 * 60 * 1)
 }
