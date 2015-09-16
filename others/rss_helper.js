@@ -2,7 +2,8 @@ var zlib       = require('zlib'),
     Feedparser = require('feedparser'),
     iconv_lite = require('iconv-lite'),
     request    = require('request'),
-    feed_list  = require('./feed_list');
+    feed_list  = require('./feed_list'),
+    News       = require(process.env.PWD + '/models/db').News;
 
 function updateCountryNews(country, now, news, callback){
 
@@ -20,15 +21,15 @@ function updateCountryNews(country, now, news, callback){
         'US': {'US': news}
     }
     if(!(country in list)){
-        log.warning('[News: Not Found]', country)
+        console.log('[News: Not Found]', country)
         return;
     }
     News.findOneAndUpdate({date: now}, list[country], function (err){
         if (err) {
-            log.error('[DB: Not Found]', err)
+            console.log('[DB: Not Found]', err)
             return;
         }
-        log.info('[News: Saved]', country)
+        console.log('[News: Saved]', country)
         callback()
     })
 }
@@ -59,16 +60,16 @@ function getNews(frequency){
         if (found){
             return;
         }
-        log.info('[News: Start Fetch]', now)
+        console.log('[News: Start Fetch]', now)
         var news = new News({
             date: now
         })
         news.save(function (err){
             if (err){
-                log.error('[DB: Save Error]', err)
+                console.log('[DB: Save Error]', err)
                 return;
             }
-            log.info('[DB: Start Fetch]', now)
+            console.log('[DB: Start Fetch]', now)
             var country_list    = Object.keys(feed_list),
                 country_len     = country_list.length,
                 country_pointer = 0;
@@ -97,19 +98,19 @@ function getNews(frequency){
                         pool: false
                     })
                     .on('error', function (err){
-                        log.error('[News: Request Error]', feed_item[feed_pointer]['source_name'], err)
+                        console.log('[News: Request Error]', feed_item[feed_pointer]['source_name'], err)
                         // 若不是「新聞列表」最後的新聞源，獲取下一個新聞源新聞
                         if (feed_pointer < feed_len - 1){
                             feed_pointer ++
                             getNextNews()
                         } else {
-                            log.info('[News: Fetch & Parse Finished]', country)
+                            console.log('[News: Fetch & Parse Finished]', country)
                             updateCountryNews(country, now, all_news, function (){
                                 if (country_pointer < country_len - 1){
                                     country_pointer ++
                                     getCountryNews(country_list[country_pointer])
                                 } else {
-                                    log.info('[News: Done]', now)
+                                    console.log('[News: Done]', now)
                                 }
                             })
                         }
@@ -126,7 +127,7 @@ function getNews(frequency){
                     // 解析當前新聞源
                     feedparser
                     .on('error', function(err){
-                        log.warning('[News: Parse Error]', feed_item[feed_pointer]['source_name'], err)
+                        console.log('[News: Parse Error]', feed_item[feed_pointer]['source_name'], err)
                     })
                     .on('readable', function(){
                         var stream = this,
@@ -160,13 +161,13 @@ function getNews(frequency){
                                     'news': cache
                                 })
                             }
-                            log.info('[News: Fetch & Parse Finished]', country)
+                            console.log('[News: Fetch & Parse Finished]', country)
                             updateCountryNews(country, now, all_news, function (){
                                 if (country_pointer < country_len - 1){
                                     country_pointer ++
                                     getCountryNews(country_list[country_pointer])
                                 } else {
-                                    log.info('[News: Done]', now)
+                                    console.log('[News: Done]', now)
                                 }
                             })
                         }

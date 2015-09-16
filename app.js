@@ -1,24 +1,12 @@
 //local variables
-var fs         = require('fs'),
-    mongoose   = require('mongoose'),
-    Log        = require('log'),
-    touch      = require('touch');
+var mongoose   = require('mongoose');
 
-// Log
-var log_file     = __dirname + '/logs/' + new Date().toUTCString() + '.log';
-touch(log_file)
-process.on('uncaughtException', function (err) {
-    console.log(err)
-    log.alert(err.toString('utf8'));
-});
-
-// global variables
-global.News = require('./models/db').News
-global.log  = new Log('info', fs.createWriteStream(log_file))
+// load dotenv
+require('dotenv').load()
 
 // read database config form VCAP_SERVICES env
-var db_uri = process.env.VCAP_SERVICES 
-    ? JSON.parse(process.env.VCAP_SERVICES).mongodb[0].credentials.uri
+var db_uri = process.env.MONGODB
+    ? JSON.parse(process.env.MONGODB).uri
     : 'mongodb://test:test@localhost:27017/test'
 
 // Connect to DB
@@ -29,7 +17,7 @@ var db = mongoose.connection
     console.log(err)
 })
 .once('open', function (){
-    log.info('[DB]', 'Connected to MongoDB')
+    console.log('[DB]', 'Connected to MongoDB')
 })
 
 // 定時抓取新聞
