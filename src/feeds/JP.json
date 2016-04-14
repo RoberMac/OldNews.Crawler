@@ -1,0 +1,22 @@
+[
+    {
+        "source_name": "Yahoo トピックストップ",
+        "url": "http://rss.dailynews.yahoo.co.jp/fc/rss.xml"
+    },
+    {
+        "source_name": "Yahoo 国内",
+        "url": "http://rss.dailynews.yahoo.co.jp/fc/domestic/rss.xml"
+    },
+    {
+        "source_name": "Google",
+        "url": "https://news.google.com/news?hl=ja&ned=us&output=rss&topic=h"
+    },
+    {
+        "source_name": "NHK ニュース",
+        "url": "http://www3.nhk.or.jp/rss/news/cat0.xml"
+    },
+    {
+        "source_name": "excite",
+        "url": "http://rss.excite.co.jp/rss/excite/odd"
+    }
+]

@@ -1,0 +1,18 @@
+[
+    {
+        "source_name": "The Times of India",
+        "url": "http://dynamic.feedsportal.com/pf/555218/http://toi.timesofindia.indiatimes.com/rssfeedstopstories.cms"
+    },
+    {
+        "source_name": "NDTV - ताज़ातरीन",
+        "url": "http://feeds.feedburner.com/ndtvkhabar"
+    },
+    {
+        "source_name": "NDTV - देश से",
+        "url": "http://feeds.feedburner.com/Khabar-India"
+    },
+    {
+        "source_name": "Google News",
+        "url": "https://news.google.com/news?pz=1&cf=all&ned=in&hl=in&output=rss"
+    }
+]

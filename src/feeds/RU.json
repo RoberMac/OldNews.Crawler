@@ -1,0 +1,18 @@
+[
+    {
+        "source_name": "Яндекс",
+        "url": "http://news.yandex.ru/world.rss"
+    },
+    {
+        "source_name": "Яндекс",
+        "url": "http://news.yandex.ru/index.rss"
+    },
+    {
+        "source_name": "РИА",
+        "url": "http://ria.ru/export/rss2/world/index.xml"
+    },
+    {
+        "source_name": "Google News",
+        "url": "https://news.google.com/news?pz=1&cf=all&ned=ru&hl=ru&output=rss"
+    }
+]

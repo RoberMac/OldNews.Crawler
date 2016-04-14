@@ -1,0 +1,18 @@
+[
+    {
+        "source_name": "Google News",
+        "url": "https://news.google.com.hk/news?pz=1&cf=all&ned=kr&hl=kr&output=rss"
+    },
+    {
+        "source_name": "이티뉴스",
+        "url": "http://rss.etnews.com/Section902.xml"
+    },
+    {
+        "source_name": "dongA.com",
+        "url": "http://rss.donga.com/total.xml"
+    },
+    {
+        "source_name": "경향신문",
+        "url": "http://www.khan.co.kr/rss/rssdata/total_news.xml"
+    }
+]

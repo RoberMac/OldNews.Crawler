@@ -1,0 +1,18 @@
+[
+    {
+        "source_name": "Yahoo Mundo",
+        "url": "https://br.noticias.yahoo.com/mundo/?format=rss"
+    },
+    {
+        "source_name": "G1",
+        "url": "http://g1.globo.com/dynamo/brasil/rss2.xml"
+    },
+    {
+        "source_name": "R7",
+        "url": "http://noticias.r7.com/brasil/feed.xml"
+    },
+    {
+        "source_name": "UOL Notícias",
+        "url": "http://rss.uol.com.br/feed/noticias.xml"
+    }
+]

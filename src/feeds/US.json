@@ -1,0 +1,38 @@
+[
+    {
+        "source_name": "BBC World",
+        "url": "http://feeds.bbci.co.uk/news/world/rss.xml"
+    },
+    {
+        "source_name": "CNN",
+        "url": "http://rss.cnn.com/rss/cnn_topstories.rss"
+    },
+    {
+        "source_name": "NYT International",
+        "url": "http://www.nytimes.com/services/xml/rss/nyt/InternationalHome.xml"
+    },
+    {
+        "source_name": "Yahoo",
+        "url": "https://news.yahoo.com/rss"
+    },
+    {
+        "source_name": "Google News",
+        "url": "https://news.google.com/?output=rss"
+    },
+    {
+        "source_name": "Hacker News",
+        "url": "http://hnrss.org/newest"
+    },
+    {
+        "source_name": "WIRED",
+        "url": "http://feeds.wired.com/wired/index"
+    },
+    {
+        "source_name": "Re/code",
+        "url": "https://recode.net/feed/"
+    },
+    {
+        "source_name": "The Verge",
+        "url": "https://www.theverge.com/rss/index.xml"
+    }
+]

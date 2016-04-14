@@ -1,0 +1,5 @@
+{
+    "CRAWL_FREQUENCY": 3600000,
+    "CHECK_FREQUENCY": 60000,
+    "COUNTRIES": ["BR", "CN", "DE", "FR", "HK", "IN", "JP", "KR", "RU", "TW", "US"]
+}

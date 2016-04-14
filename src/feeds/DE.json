@@ -1,0 +1,23 @@
+[
+    {
+        "source_name": "SPIEGEL ONLINE",
+        "url": "http://www.spiegel.de/schlagzeilen/tops/index.rss",
+        "encoding": "Windows-1252"
+    },
+    {
+        "source_name": "T-Online",
+        "url": "http://feeds.t-online.de/rss/nachrichten"
+    },
+    {
+        "source_name": "Bild.de",
+        "url": "http://rss.bild.de/bild.xml"
+    },
+    {
+        "source_name": "Google News",
+        "url": "https://news.google.com/news?pz=1&cf=all&ned=de&hl=de&output=rss"
+    },
+    {
+        "source_name": "Yahoo nachrichten",
+        "url": "https://de.nachrichten.yahoo.com/rss"
+    }
+]

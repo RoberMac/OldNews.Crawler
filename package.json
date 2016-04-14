@@ -1,8 +1,14 @@
 {
   "name": "ShinyaApp-News-Crawler",
-  "version": "0.1.1",
-  "description": "News Crawler for ShinyaApp / ShinyaNewsApp(ShinyaApp-News)",
+  "version": "0.2.0-rc.1",
+  "description": "News Crawler for RoberMac/ShinyaApp-News",
+  "scripts": {
+    "start": "NODE_ENV=production node app.js"
+  },
   "main": "app.js",
+  "engines": {
+    "node": ">= 4.0.0"
+  },
   "author": {
     "name": "RoberTu",
     "email": "robertu0717@gmail.com",
@@ -10,13 +16,14 @@
   },
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/RoberMac/ShinyaApp/issues"
+    "url": "https://github.com/RoberMac/ShinyaApp-News-Crawler/issues"
   },
   "dependencies": {
-    "dotenv": "^1.2.0",
+    "dotenv": "^2.0.0",
     "feedparser": "^1.1.3",
     "iconv-lite": "^0.4.11",
     "mongoose": "^4.0.6",
+    "q": "^1.4.1",
     "request": "^2.58.0"
   }
 }

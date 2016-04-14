@@ -1,25 +1,24 @@
-//local variables
-var mongoose   = require('mongoose');
+const Q = require('q');
+
+// global variables
+global.News = require('./src/models').News;
+global.q_newsFindOne = Q.nbind(News.findOne, News);
+global.q_newsFindOneAndUpdate = Q.nbind(News.findOneAndUpdate, News);
 
 // load dotenv
-require('dotenv').load()
-
-// read database config form VCAP_SERVICES env
-var db_uri = process.env.MONGODB
-    ? JSON.parse(process.env.MONGODB).uri
-    : 'mongodb://test:test@localhost:27017/test'
+require('dotenv').load();
 
 // Connect to DB
-mongoose.connect(db_uri);
+const mongoose = require('mongoose');
+const DB_URI = (
+    process.env.MONGODB
+        ? JSON.parse(process.env.MONGODB).uri
+    : 'mongodb://test:test@localhost:27017/test'
+);
+mongoose.connect(DB_URI);
+mongoose.connection
+.on('err', (err) => console.error(err))
+.once('open', () => console.log('Connected to MongoDB'));
 
-var db = mongoose.connection
-.on('err', function (err){
-    console.log(err)
-})
-.once('open', function (){
-    console.log('[DB]', 'Connected to MongoDB')
-})
-
-// 定時抓取新聞
-var getNews = require('./others/rss_helper');
-getNews(1000 * 60 * 60 * 1)
+// News Crawl
+require('./src/crawler')();

@@ -1,0 +1,39 @@
+[
+    {
+        "source_name": "Google 新聞",
+        "url": "https://news.google.com.hk/news?pz=1&cf=all&ned=hk&hl=zh-TW&output=rss"
+    },
+    {
+        "source_name": "Yahoo 新聞",
+        "url": "https://hk.news.yahoo.com/rss/hong-kong"
+    },
+    {
+        "source_name": "香港電台網站",
+        "url": "http://www.rthk.org.hk/rthk/news/rss/c_expressnews.xml",
+        "encoding": "BIG5"
+    },
+    {
+        "source_name": "東方日報",
+        "url": "http://orientaldaily.on.cc/rss/news.xml"
+    },
+    {
+        "source_name": "聚言時報",
+        "url": "http://polymerhk.com/feed"
+    },
+    {
+        "source_name": "Goal.com",
+        "url": "http://www.goal.com/hk/feeds/news?fmt=rss"
+    },
+    {
+        "source_name": "紐約時報中文網",
+        "url": "http://cn.nytimes.com/rss/zh-hant"
+    },
+    {
+        "source_name": "BBC 中文網",
+        "url": "http://www.bbc.co.uk/zhongwen/trad/index.xml"
+    },
+    {
+        "source_name": "Engadget 中文版",
+        "url": "http://chinese.engadget.com/rss.xml"
+    }
+]

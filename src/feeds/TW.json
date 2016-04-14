@@ -1,0 +1,34 @@
+[
+    {
+        "source_name": "蘋果日報",
+        "url": "http://www.appledaily.com.tw/rss/newcreate/kind/rnews/type/new"
+    },
+    {
+        "source_name": "Google 新聞",
+        "url": "https://news.google.com/news?cf=all&ned=tw&hl=zh-TW&output=rss"
+    },
+    {
+        "source_name": "聯合新聞網",
+        "url": "http://udn.com/rssfeed/news/1/1?ch=news"
+    },
+    {
+        "source_name": "中時電子報",
+        "url": "http://feeds.feedburner.com/chinatimes/realtimenews-focus"
+    },
+    {
+        "source_name": "Inside",
+        "url": "http://feeds.feedburner.com/inside-blog-taiwan"
+    },
+    {
+        "source_name": "紐約時報中文網",
+        "url": "http://cn.nytimes.com/rss/zh-hant"
+    },
+    {
+        "source_name": "BBC 中文網",
+        "url": "http://www.bbc.co.uk/zhongwen/trad/index.xml"
+    },
+    {
+        "source_name": "Engadget 中文版",
+        "url": "http://chinese.engadget.com/rss.xml"
+    }
+]
