@@ -14,7 +14,6 @@
         "consistent-return": 0,
         "indent": [2, 4, { "SwitchCase": 1, "VariableDeclarator": 1 }],
         "key-spacing": [2, { "align": "colon" }],
-        "new-cap": [2, {"capIsNewExceptions": ["Unsplash", "Weibo", "Router"]}],
         "no-confusing-arrow": 0,
         "no-console": 0,
         "no-multi-spaces": [2, { "exceptions": { "VariableDeclarator": true } }],
@@ -26,9 +25,3 @@
         "no-use-before-define": [2, { "functions": false }]
     }
 }
-
-/**
- * Issues
- *
- * 2) ES6 Assignment Destructuring [no-shadow]
- */

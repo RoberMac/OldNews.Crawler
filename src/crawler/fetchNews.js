@@ -84,9 +84,6 @@ module.exports = class FetchNews {
             // fetch next source's news if not the last source
             if (isLastSource) {
                 this._nextSources();
-            } else {
-                console.log('[Fetch & Parse Finished]', this.country);
-                this._storeCountryNews();
             }
         })
         .on('response', res => {
@@ -127,7 +124,6 @@ module.exports = class FetchNews {
             if (isLastSource) {
                 this._nextSources();
             } else {
-                console.log('[Fetch & Parse Finished]', this.country);
                 this._storeCountryNews();
             }
         });

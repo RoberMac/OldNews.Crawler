@@ -1,9 +1,10 @@
 {
   "name": "ShinyaApp-News-Crawler",
-  "version": "0.2.0-rc.1",
+  "version": "0.2.0-rc.2",
   "description": "News Crawler for RoberMac/ShinyaApp-News",
   "scripts": {
-    "start": "NODE_ENV=production node app.js"
+    "start": "NODE_ENV=production node app.js",
+    "lint": "eslint --ext .js app.js src"
   },
   "main": "app.js",
   "engines": {
@@ -25,5 +26,9 @@
     "mongoose": "^4.0.6",
     "q": "^1.4.1",
     "request": "^2.58.0"
+  },
+  "devDependencies": {
+    "eslint": "^2.7.0",
+    "eslint-config-airbnb": "^7.0.0"
   }
 }

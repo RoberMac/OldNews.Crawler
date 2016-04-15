@@ -8,6 +8,10 @@
         "url": "https://hk.news.yahoo.com/rss/hong-kong"
     },
     {
+        "source_name": "端傳媒",
+        "url": "https://theinitium.com/newsfeed/"
+    },
+    {
         "source_name": "香港電台網站",
         "url": "http://www.rthk.org.hk/rthk/news/rss/c_expressnews.xml",
         "encoding": "BIG5"

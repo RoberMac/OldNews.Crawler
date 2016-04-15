@@ -1,23 +1,11 @@
 [
     {
-        "source_name": "Google 新闻",
-        "url": "https://news.google.com/news?cf=all&ned=cn&hl=zh-CN&output=rss"
-    },
-    {
         "source_name": "新浪新闻",
         "url": "http://rss.sina.com.cn/news/china/focus15.xml"
     },
     {
         "source_name": "华尔街见闻",
         "url": "http://wallstreetcn.com/rss.xml"
-    },
-    {
-        "source_name": "纽约时报中文网",
-        "url": "http://cn.nytimes.com/rss.html"
-    },
-    {
-        "source_name": "BBC 中文网",
-        "url": "http://www.bbc.co.uk/zhongwen/trad/index.xml"
     },
     {
         "source_name": "cnBeta",
