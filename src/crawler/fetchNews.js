@@ -60,7 +60,7 @@ module.exports = class FetchNews {
         const feedparser = new FeedParser();
         const minNewsDate = this.now - CRAWL_FREQUENCY;
         const source = this.sources[this.sourcesId];
-        const isLastSource = this.sourcesId < this.sources.length - 1;
+        const isLastSource = this.sourcesId >= this.sources.length - 1;
 
         // fetch news
         const req = request({
@@ -82,8 +82,10 @@ module.exports = class FetchNews {
             console.error('[Request Error]', source.source_name, err);
 
             // fetch next source's news if not the last source
-            if (isLastSource) {
+            if (!isLastSource) {
                 this._nextSources();
+            } else {
+                this._storeCountryNews();
             }
         })
         .on('response', res => {
@@ -121,7 +123,7 @@ module.exports = class FetchNews {
                 });
             }
             // fetch next source's news if not the last source
-            if (isLastSource) {
+            if (!isLastSource) {
                 this._nextSources();
             } else {
                 this._storeCountryNews();

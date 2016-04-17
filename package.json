@@ -1,6 +1,6 @@
 {
   "name": "ShinyaApp-News-Crawler",
-  "version": "0.2.0-rc.2",
+  "version": "0.2.0-rc.3",
   "description": "News Crawler for RoberMac/ShinyaApp-News",
   "scripts": {
     "start": "NODE_ENV=production node app.js",
